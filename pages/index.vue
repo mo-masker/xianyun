@@ -69,6 +69,18 @@ export default {
 
       this.banners = data
     })
+  },
+
+  methods: {
+    // tab栏切换
+    handleChangeTab(index) {
+      // 如果点击的机票，跳转到机票页面
+      if (index === 2) {
+        this.$router.push('/air')
+      }
+      // 修改当前高亮
+      this.currentTab = index
+    }
   }
 }
 </script>
